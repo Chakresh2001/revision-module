@@ -59,7 +59,7 @@ postRoute.get("/:id", auth, async(req,res)=>{
 
         const post = await PostModel.findById(id)
 
-        res.json({message:post})
+        res.json({message:post, me:"hello"})
         
     } catch (error) {
         res.json({ error: error.message})
